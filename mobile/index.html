@@ -12,7 +12,6 @@
 		<script src="./js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js" type="text/javascript" charset="utf-8">
 		</script>
-		<script src="lib/Swiper-3.3.1/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!-- 首页 -->
@@ -87,7 +86,8 @@
 				<div class="outline">
 					<!-- 课程大纲导航栏 -->
 					<div class="index_outline_navs">
-						<div class="outline_nav" @click="outlineNavs(index)" :key="index" v-for="(item,index) in outline">
+						<div class="outline_nav" @click="outlineNavs(index)" :key="index"
+							v-for="(item,index) in outline">
 							<img :src="outline_img[index]">
 							<div class="outline_nav_con">{{item.title}}</div>
 							<!-- <div :class="[isActive?outline_nav_xian:'outline_nav_xians']"></div> -->
@@ -133,40 +133,42 @@
 				<!-- 教研信息 -->
 				<div class="index_research_con-info">
 					<div class="research_con-info-item" :key="index" v-for="(item,index) in research_con_info_item">
-						<div class="research_con-info-item-1">{{item.con1}} <span class="research_con-info-item-1-s">{{item.con_1}}</span> </div>
-						<div class="research_con-info-item-2">{{item.con2}}<span class="research_con-info-item-1-s">{{item.con_1}}</span></div>
-						<div class="research_con-info-item-3">{{item.con3}}<span class="research_con-info-item-1-s">{{item.con_1}}</span></div>
+						<div class="research_con-info-item-1">{{item.con1}} <span
+								class="research_con-info-item-1-s">{{item.con_1}}</span> </div>
+						<div class="research_con-info-item-2">{{item.con2}}<span
+								class="research_con-info-item-1-s">{{item.con_1}}</span></div>
+						<div class="research_con-info-item-3">{{item.con3}}<span
+								class="research_con-info-item-1-s">{{item.con_1}}</span></div>
 					</div>
 				</div>
 				<!-- 老师信息 -->
-				<div class="swiper-container index_research_lun ">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" >
-							<!-- <div class="index_research_lun-item" :key="index" v-for="(item,index) in research_lun"> -->
-							<div class="research_item_img">
-								<img class="research_item_img" :src="urlImg+item.img" alt="image">
-							</div>
-							<div class="research_item_con">
-								<div class="research_item_con-c research_item_con-cs">
+			<div class="swiper-container1 index_research_lun ">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide index_research_i" v-for="(item,index) in research_lun" :key="index">
+						<div class="index_research_is">
+							<!-- <div class="research_i-l"> -->
+								<img class="research_i-l" :src="urlImg+item.img" />
+							<!-- </div> -->
+							<div class="research_i-r">
+								<div class="research_i-r-t">
 									<div>{{item.user}}</div>
 									<div>教学负责人</div>
 								</div>
-								<div class="research_item_con-c">
-									<div class="research_item_con-info" v-for="item in 3">
-										UI/UE
+								<div class="research_i-r-cs">
+									<div class="research_i-r-c" v-for="item in 3">
+										Java
 									</div>
 								</div>
-							</div>
-							<!-- <div class="research_item_mask">
-								<div class="research_item_mask-name">{{item.user}}</div>
-								<div class="research_item_mask-con">
-									{{item.info}}
+								
+								<div class="research_i-r-b">
+									{{item.intro}}
 								</div>
-							</div> -->
-							<!-- </div> -->
+							</div>
 						</div>
+						
 					</div>
 				</div>
+			</div>
 				<div class="index_research_button">了解更多老师信息</div>
 			</div>
 			<!-- 学员 -->
@@ -203,7 +205,8 @@
 						<div class="dynamic_info-top-con">
 							<img class="dynamic_info-top-con-img" :src="urlImg+dynamic_info_img">
 							<div class="dynamic_info-top-con-items">
-								<div class="dynamic_info-top-con-item" :key="index" v-for="(item,index) in dynamic_info_top_con_item">
+								<div class="dynamic_info-top-con-item" :key="index"
+									v-for="(item,index) in dynamic_info_top_con_item">
 									<div class="dynamic_info-top-con-item-l">New</div>
 									<div class="dynamic_info-top-con-item-r">
 										<div class="dynamic_info-top-con-item-r-title">
@@ -220,7 +223,8 @@
 							新闻动态
 						</div>
 						<div class="dynamic_info-bottom-items">
-							<div class="dynamic_info-bottom-item" @click="dynamicBtn(index)" :key='index' v-for="(item,index) in dynamic_info_bottom_item">
+							<div class="dynamic_info-bottom-item" @click="dynamicBtn(index)" :key='index'
+								v-for="(item,index) in dynamic_info_bottom_item">
 								<div class="dynamic_info-bottom-item-l">
 									{{index+1}}
 								</div>
@@ -268,5 +272,6 @@
 			</div>
 		</div>
 	</body>
+	<script src="lib/Swiper-3.3.1/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>

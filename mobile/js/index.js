@@ -260,3 +260,9 @@
 			spaceBetween: 30,
 			freeMode: true
 		});
+			  var swiper = new Swiper('.swiper-container1', {
+			        pagination: '.swiper-pagination',
+			        slidesPerView: 'auto',
+			        paginationClickable: true,
+			        spaceBetween: 10
+			    });
