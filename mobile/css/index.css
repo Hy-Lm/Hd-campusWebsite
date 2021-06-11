@@ -250,13 +250,13 @@ html {
 }
 
 .course_item_title {
-	width: 1.92rem;
+	/* width: 1.92rem; */
 	height: 0.533333rem;
 	opacity: 1;
 	font-size: 0.346666rem;
 	font-family: PingFang SC, PingFang SC-Bold;
 	font-weight: 700;
-	text-align: left;
+	text-align: center;
 	color: #333333;
 }
 
@@ -266,8 +266,8 @@ html {
 }
 
 .course_item_img>img {
-	width: 100%;
-	height: 100%;
+	/* width: 100%;
+	height: 100%; */
 }
 
 .course_item_btn {
@@ -313,8 +313,16 @@ html {
 	display: flex;
 	align-items: center;
 	height: 0.546666rem;
+	position: relative;
 }
-
+.outline_nav_xian{
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 0.8rem;
+	height: 0.08rem;
+	background:#3258E5;
+}
 .outline_nav img {
 	vertical-align: middle;
 	width: 0.28rem;
@@ -329,6 +337,7 @@ html {
 }
 
 .outline_nav .outline_nav_con {
+	position: relative;
 	opacity: 1;
 	font-size: 0.32rem;
 	font-family: PingFang SC, PingFang SC-Regular;
@@ -336,7 +345,6 @@ html {
 	text-align: left;
 	color: #333333;
 }
-
 .outline_nav_title {
 	padding: 0 0.133333rem;
 	position: relative;
@@ -397,7 +405,7 @@ html {
 	width: 100%;
 	height: 0.4rem;
 	font-size: 0.32rem;
-
+	color: #83b1F9;
 }
 
 .outline_nav_con_con {
@@ -519,13 +527,19 @@ html {
 }
 
 .research_con-info-item-1 {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 	opacity: 1;
 	font-size: 0.586666rem;
 	font-family: PingFang SC, PingFang SC-Bold;
 	font-weight: 700;
 	color: #333333;
 }
-
+.research_con-info-item-1-s{
+	display: inline-block;
+	font-size: 0.373333rem;
+}
 .research_con-info-item-2 {
 	font-size: 0.373333rem;
 }
@@ -817,6 +831,9 @@ html {
 	font-weight: 400;
 	text-align: left;
 	color: #333333;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .dynamic_info-bottom-item{
 	display: flex;
@@ -887,6 +904,7 @@ html {
 .campus-imgs-items-imgs{
 	background: url(../images/矩形%20290.png) no-repeat;
 	background-size: 100%;
+	padding:0.066666rem;
 	width: 4.426666rem;
 	height: 2.72rem;
 	display: flex;

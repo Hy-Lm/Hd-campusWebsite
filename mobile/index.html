@@ -40,11 +40,11 @@
 			</div>
 			<!-- 相关信息 -->
 			<div class="index_crotchety">
-				<div class="index_crotchety_item" v-for="item in 4">
+				<div class="index_crotchety_item" v-for="(item,index) in crotchety_item" :key="index">
 					<!-- <div class="index_crotchety_icon"> -->
-					<img src="./images/send%20inquiry.png">
+					<img :src="item.img">
 					<!-- </div> -->
-					<div class="index_crotchety_con">学费价格</div>
+					<div class="index_crotchety_con">{{item.con}}</div>
 				</div>
 			</div>
 			<!-- 课程中心 -->
@@ -57,10 +57,10 @@
 				</div>
 				<div class="swiper-container index_course_lun ">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide" v-for="item in 4">
-							<div class="course_item_title">Java大数据</div>
+						<div class="swiper-slide" v-for="(item,index) in course_item" :key="index">
+							<div class="course_item_title">{{item.con}}</div>
 							<div class="course_item_img">
-								<img src="./images/Java大数据插图.png" alt="image">
+								<img :src="item.img" alt="image">
 							</div>
 							<div class="course_item_btn">
 								<img src="./images/课程大纲icon.png" alt="image">
@@ -87,18 +87,20 @@
 				<div class="outline">
 					<!-- 课程大纲导航栏 -->
 					<div class="index_outline_navs">
-						<div class="outline_nav" v-for="item in 4">
-							<img src="./images/send%20inquiry.png">
-							<div class="outline_nav_con">学费价格</div>
+						<div class="outline_nav" @click="outlineNavs(index)" :key="index" v-for="(item,index) in outline">
+							<img :src="outline_img[index]">
+							<div class="outline_nav_con">{{item.title}}</div>
+							<!-- <div :class="[isActive?outline_nav_xian:'outline_nav_xians']"></div> -->
+							<div v-if="item.isActive==true" class="outline_nav_xian"></div>
 						</div>
 					</div>
 					<!-- 课程 大纲导航标题 -->
-					<div class="outline_nav_title">Java - 高级软件工程师课程培训标准</div>
+					<div class="outline_nav_title">{{outline_nav_title}}</div>
 					<!-- 课程大纲导航内容 -->
 					<div class="outline_nav_cons">
-						<div class="outline_nav_cons_s" v-for="(item,index) in 7">
+						<div class="outline_nav_cons_s" :key="index" v-for="(item,index) in outline_nav_cons_s">
 							<div class="outline_nav_con_index">{{index+1}}</div>
-							<div class="outline_nav_con_con">高级软件工程师 培训课程</div>
+							<div class="outline_nav_con_con">{{item}}</div>
 						</div>
 					</div>
 				</div>
@@ -106,14 +108,14 @@
 				<div class="outline_nav_title outline_feature">项目特色</div>
 				<!-- 项目特色内容 -->
 				<div class="outline_feature_items">
-					<div class="outline_feature_item" v-for="item in 6">
+					<div class="outline_feature_item" :key="index" v-for="(item,index) in outline_feature_item">
 						<!-- <div class="feature_item-img"> -->
-						<img class="feature_item-img" src="./images/icon-rgb_全行业.png">
+						<img class="feature_item-img" :src="item.img">
 						<!-- </div> -->
-						<div class="feature_item-title">全行业</div>
+						<div class="feature_item-title">{{item.con}}</div>
 						<div class="feature_item-con">
-							<div>20+热门行业覆盖</div>
-							<div>大厂深度共建</div>
+							<div>{{item.content1}}</div>
+							<div>{{item.content2}}</div>
 						</div>
 					</div>
 				</div>
@@ -130,23 +132,23 @@
 				</div>
 				<!-- 教研信息 -->
 				<div class="index_research_con-info">
-					<div class="research_con-info-item" v-for="item in 4">
-						<div class="research_con-info-item-1">22位</div>
-						<div class="research_con-info-item-2">硬核讲师</div>
-						<div class="research_con-info-item-3">技术领域专精</div>
+					<div class="research_con-info-item" :key="index" v-for="(item,index) in research_con_info_item">
+						<div class="research_con-info-item-1">{{item.con1}} <span class="research_con-info-item-1-s">{{item.con_1}}</span> </div>
+						<div class="research_con-info-item-2">{{item.con2}}<span class="research_con-info-item-1-s">{{item.con_1}}</span></div>
+						<div class="research_con-info-item-3">{{item.con3}}<span class="research_con-info-item-1-s">{{item.con_1}}</span></div>
 					</div>
 				</div>
 				<!-- 老师信息 -->
 				<div class="swiper-container index_research_lun ">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide " v-for="item in 4">
-							<!-- <div class="index_research_lun-item"> -->
+						<div class="swiper-slide" >
+							<!-- <div class="index_research_lun-item" :key="index" v-for="(item,index) in research_lun"> -->
 							<div class="research_item_img">
-								<img class="research_item_img" src="./images/张老师.png" alt="image">
+								<img class="research_item_img" :src="urlImg+item.img" alt="image">
 							</div>
 							<div class="research_item_con">
 								<div class="research_item_con-c research_item_con-cs">
-									<div>张老师</div>
+									<div>{{item.user}}</div>
 									<div>教学负责人</div>
 								</div>
 								<div class="research_item_con-c">
@@ -155,14 +157,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="research_item_mask">
-								<div class="research_item_mask-name">钟老师</div>
+							<!-- <div class="research_item_mask">
+								<div class="research_item_mask-name">{{item.user}}</div>
 								<div class="research_item_mask-con">
-									老师介绍包含学校任职，教学经验，管理经验、教学成果，教研组组长，多年全栈教学经验，曾在XX公司任职开发总监职位，课程研究成果曾获得XXIT职业优秀教案奖，教学负责人，教研组组长，多年全栈教学经验，曾在XX公司任职开发总监职位。
+									{{item.info}}
 								</div>
-							</div>
+							</div> -->
 							<!-- </div> -->
-
 						</div>
 					</div>
 				</div>
@@ -178,11 +179,11 @@
 				</div>
 				<div class="index_student_imgs">
 					<div class="index_student_imgs-i">
-						<div class="student_imgs_item" v-for="item in 12">
+						<div class="student_imgs_item" :key="index" v-for="(item,index) in student_imgs_item">
 							<div class="student_imgs_item-img">
-								<img src="images/code.png">
+								<img :src="item.img">
 							</div>
-							<div class="student_imgs_item-con">一份面试可用的作品</div>
+							<div class="student_imgs_item-con">{{item.con}}</div>
 						</div>
 					</div>
 					<div class="index_student_button">咨询课程信息</div>
@@ -200,16 +201,15 @@
 					<div class="index_dynamic_info-top">
 						<div class="dynamic_info-top-title">学院资讯</div>
 						<div class="dynamic_info-top-con">
-							<img class="dynamic_info-top-con-img" src="./images/BBQ.png">
+							<img class="dynamic_info-top-con-img" :src="urlImg+dynamic_info_img">
 							<div class="dynamic_info-top-con-items">
-								<div class="dynamic_info-top-con-item" v-for="item in 3">
+								<div class="dynamic_info-top-con-item" :key="index" v-for="(item,index) in dynamic_info_top_con_item">
 									<div class="dynamic_info-top-con-item-l">New</div>
 									<div class="dynamic_info-top-con-item-r">
 										<div class="dynamic_info-top-con-item-r-title">
-											辉达Java学院V6.1.0课程上线
+											{{item.mesTitle}}
 										</div>
-										<div class="dynamic_info-top-con-item-r-con">Java大数据专业最新课程正式上线，专业研发团队，经实践研发，专业
-											研发团队，经符合学生…</div>
+										<div class="dynamic_info-top-con-item-r-con">{{item.mesCon}}</div>
 									</div>
 								</div>
 							</div>
@@ -220,12 +220,12 @@
 							新闻动态
 						</div>
 						<div class="dynamic_info-bottom-items">
-							<div class="dynamic_info-bottom-item" v-for="(item,index) in 10">
+							<div class="dynamic_info-bottom-item" @click="dynamicBtn(index)" :key='index' v-for="(item,index) in dynamic_info_bottom_item">
 								<div class="dynamic_info-bottom-item-l">
 									{{index+1}}
 								</div>
 								<div class="dynamic_info-bottom-item-r">
-									新征程，再出发 | 辉达教育2021年成立新媒体学院
+									{{item.message}}
 								</div>
 							</div>
 						</div>
@@ -241,11 +241,11 @@
 					高配置学习环境让你安心学习
 				</div>
 				<div class="index_campus-imgs">
-					<div class="index_campus-imgs-items" v-for="(item,index) in 4" :key="index">
+					<div class="index_campus-imgs-items" v-for="(item,index) in campus_imgs_items" :key="index">
 						<div class="campus-imgs-items-imgs">
-							<img src="" v-for="(item,index) in 4" :key="index">
+							<img :src="urlImg+item" v-for="(item,index) in item.img" :key="index">
 						</div>
-						<div class="campus-imgs-items-imgs-con">校园环境</div>
+						<div class="campus-imgs-items-imgs-con">{{item.name}}</div>
 					</div>
 				</div>
 			</div>
