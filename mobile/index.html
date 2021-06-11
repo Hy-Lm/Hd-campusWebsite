@@ -10,7 +10,8 @@
 		<link rel="stylesheet" href="./css/index.css">
 		<script src="./js/setRem.js"></script>
 		<script src="./js/vue.js" type="text/javascript" charset="utf-8"></script>
-		<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js" type="text/javascript" charset="utf-8">
+		</script>
 		<script src="lib/Swiper-3.3.1/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -21,18 +22,18 @@
 				<img class="index_banner_img" src="./images/banner01.png" alt="" srcset="">
 				<div class="idnex_banner-bg">
 					<!-- <div class="idnex_banner-bg-l"> -->
-						<img class="idnex_banner-bg-l-img" src="./images/辉达LOGOpng.png" >
+					<img class="idnex_banner-bg-l-img" src="./images/辉达LOGOpng.png">
 					<!-- </div> -->
-					<img class="idnex_banner-bg-r" src="./images/san.png" >
+					<img class="idnex_banner-bg-r" @click='bannerBg' src="./images/san.png">
 				</div>
 				<!-- 隐藏的列表 -->
-				<div class="index_banner_list">
+				<div class="index_banner_list" v-if="banner_list==true">
 					<div class="img">
-						<img class="index_banner_list-img" src="./images/×.png" >
+						<img class="index_banner_list-img" @click='bannerBg' src="./images/×.png">
 					</div>
 					<div class="index_banner_list-item">
-						<div class="index_banner_list-items" v-for="item in 5">
-							课程中心
+						<div class="index_banner_list-items" v-for="(item,index) in banner_list_items" :key="index">
+							{{item}}
 						</div>
 					</div>
 				</div>
@@ -170,7 +171,7 @@
 			<!-- 学员 -->
 			<div class="index_course index_student">
 				<div class="index_course_title index_student_title">
-					教研团队
+					用心为每一位学员
 				</div>
 				<div class="index_course_con index_student_con">
 					为毕业学员提供高质量人脉、职场资源、技术研习等 众多学习交流机会
@@ -242,7 +243,7 @@
 				<div class="index_campus-imgs">
 					<div class="index_campus-imgs-items" v-for="(item,index) in 4" :key="index">
 						<div class="campus-imgs-items-imgs">
-							<img src=""  v-for="(item,index) in 4" :key="index" >
+							<img src="" v-for="(item,index) in 4" :key="index">
 						</div>
 						<div class="campus-imgs-items-imgs-con">校园环境</div>
 					</div>
@@ -267,23 +268,5 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript">
-		var vm = new Vue({
-			el: '#box',
-			data: {
-				msg: '123'
-			},
-			mounted() {},
-			methods: {}
-		})
-	</script>
-	<script type="text/javascript">
-		var swiper = new Swiper('.swiper-container', {
-			pagination: '.swiper-pagination',
-			slidesPerView: 2,
-			paginationClickable: true,
-			spaceBetween: 30,
-			freeMode: true
-		});
-	</script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>

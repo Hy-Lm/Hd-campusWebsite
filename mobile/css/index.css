@@ -53,7 +53,7 @@ html {
 }
 /* 隐藏列表 */
 .index_banner_list{
-	display: none;
+	/* display: none; */
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -167,13 +167,13 @@ html {
 
 .index_course_title {
 	position: relative;
-	width: 1.92rem;
+	/* width: 1.92rem; */
 	height: 0.666666rem;
 	opacity: 1;
 	font-size: 0.48rem;
 	font-family: PingFang SC, PingFang SC-Bold;
 	font-weight: 700;
-	text-align: left;
+	text-align: center;
 	color: #333333;
 	margin-bottom: 0.106666rem;
 }
@@ -583,6 +583,7 @@ html {
 	font-weight: 700;
 	text-align: center;
 	color: #ffffff;
+	margin-bottom: 0.146666rem;
 }
 
 .research_item_mask-con {
@@ -875,8 +876,9 @@ html {
 	flex: 1;
 }
 .index_campus-imgs-items{
-	/* width:100%;
-	height: 3.306666rem; */
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 	margin-right: 0.346666rem;
 }
 .index_campus-imgs-items:nth-child(even){
@@ -884,6 +886,7 @@ html {
 }
 .campus-imgs-items-imgs{
 	background: url(../images/矩形%20290.png) no-repeat;
+	background-size: 100%;
 	width: 4.426666rem;
 	height: 2.72rem;
 	display: flex;
@@ -891,7 +894,7 @@ html {
 }
 .campus-imgs-items-imgs>img{
 	width: 50%;
-	background-color: red;	
+	/* background-color: red;	 */
 }
 .campus-imgs-items-imgs-con{
 	height: 0.453333rem;
