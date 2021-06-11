@@ -30,16 +30,14 @@ html {
 	display: flex;
 	justify-content: space-between;
 }
-.idnex_banner-bg-l{
+.idnex_banner-bg-l-img{
+	display: inline-block;
 	width: 2.08rem;
 	height: 0.613333rem;
 }
-.idnex_banner-bg-l>img{
-	width: 100%;
-	height: 100%;
-}
 .idnex_banner-bg-r{
-	margin-top: 0.4rem;
+	width: 16px;
+	height: 13px;
 	opacity: 1;
 	font-size: 18px;
 	color: #FFFFFF;
@@ -48,12 +46,57 @@ html {
 	text-align: left;
 	/* color: #333333; */
 }
-.index_banner img {
+.index_banner .index_banner_img {
 	width: 100%;
 	height: 100%;
 	/* background-color: aqua; */
 }
-
+/* 隐藏列表 */
+.index_banner_list{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #fff;
+	width: 7.653333rem;
+	height: 6.506666rem;
+	padding: 0.4rem;
+	padding-top: 0;
+	box-sizing: border-box;
+}
+.index_banner_list-img{
+	position: relative;
+	float: right;
+	opacity: 1;
+	font-size: 0.693333rem;
+	font-family: PingFang SC, PingFang SC-Regular;
+	font-weight: 400;
+	text-align: left;
+	color: #333333;
+}
+.img{
+	position: relative;
+	height: 0.8rem;
+}
+.index_banner_list-item{
+	opacity: 1;
+	font-size: 0.373333rem;
+	font-family: PingFang SC, PingFang SC-Regular;
+	font-weight: 400;
+	text-align: left;
+	color: #333333;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 1;
+	
+}
+.index_banner_list-items{
+	padding-left: 0.466666rem;
+	border-bottom: 1px solid #F0F0F0;
+	height: 1.066666rem;
+	line-height: 1.066666rem;
+}
 /* 相关信息 */
 .index_crotchety {
 	opacity: 1;
@@ -333,7 +376,7 @@ html {
 	top: 40%;
 	left: -4%;
 	opacity: 1;
-	background: black;
+	background: #9fc9fa;
 	border-radius: 50%;
 }
 
@@ -342,8 +385,8 @@ html {
 	box-sizing: border-box;
 	width: 25%;
 	height: 1.333333rem;
-	opacity: 0.3;
-	border-left: 2px solid red;
+	/* opacity: 0.3; */
+	border-left: 2px solid #EEF6FE;
 	margin-bottom: 0.533333rem;
 }
 
@@ -358,7 +401,7 @@ html {
 }
 
 .outline_nav_con_con {
-	border-top: 1px solid red;
+	border-top: 1px solid #EEF6FE;
 	/* margin: 0.266666rem 0; */
 	padding: 0 0.16rem;
 	padding-top: 0.066666rem;
@@ -370,7 +413,7 @@ html {
 	font-family: PingFang SC, PingFang SC-Regular;
 	font-weight: 400;
 	text-align: center;
-	color: #666666;
+	color: #666666 !important;
 }
 
 .outline_feature {
@@ -387,7 +430,7 @@ html {
 
 .outline_feature_item {
 	margin-bottom: 0.4rem;
-	opacity: 0.6;
+	/* opacity: 0.6; */
 	background: #ebf5ff;
 	border-radius: 20px;
 	padding: 0.346666rem 0;
@@ -823,20 +866,43 @@ html {
 	text-align: center;
 }
 .index_campus-imgs{
+	padding: 0 0.4rem;
+	box-sizing: border-box;
 	width: 10rem;
-	height: 5.186666rem;
+	height: 5.306666rem;
 	display: flex;
+	flex-wrap: wrap;
 	flex: 1;
 }
-.index_campus-imgs-img{
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	flex: 1;
+.index_campus-imgs-items{
+	/* width:100%;
+	height: 3.306666rem; */
+	margin-right: 0.346666rem;
 }
-.index_campus-imgs-img>img{
-	width: 100%;
-	height: 100%;
+.index_campus-imgs-items:nth-child(even){
+	margin-right: 0;
+}
+.campus-imgs-items-imgs{
+	background: url(../images/矩形%20290.png) no-repeat;
+	width: 4.426666rem;
+	height: 2.72rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.campus-imgs-items-imgs>img{
+	width: 50%;
+	background-color: red;	
+}
+.campus-imgs-items-imgs-con{
+	height: 0.453333rem;
+	opacity: 1;
+	font-size: 0.32rem;
+	font-family: PingFang SC, PingFang SC-Regular;
+	font-weight: 400;
+	text-align: center;
+	color: #333333;
+	letter-spacing: 0.04rem;
+	margin: 0.133333rem 0;
 }
 /* 简介 */
 .index_synopsis{
@@ -874,6 +940,7 @@ html {
 .footer img{
 	width: 0.413333rem;
 	height: 0.386666rem;
+	margin-right: 0.133333rem;
 }
 .footer-con{
 	opacity: 1;

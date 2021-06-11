@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="./css/index.css">
 		<script src="./js/setRem.js"></script>
 		<script src="./js/vue.js" type="text/javascript" charset="utf-8"></script>
-		<script src="./js/axios.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/Swiper-3.3.1/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -18,12 +18,23 @@
 		<div id="box">
 			<!-- 背景图 -->
 			<div class="index_banner">
-				<img src="./images/banner01.png" alt="" srcset="">
+				<img class="index_banner_img" src="./images/banner01.png" alt="" srcset="">
 				<div class="idnex_banner-bg">
-					<div class="idnex_banner-bg-l">
-						<img class="idnex_banner-bg-l" src="./images/辉达LOGOpng.png" >
-					</div> 
-					<div class="idnex_banner-bg-r">三</div>
+					<!-- <div class="idnex_banner-bg-l"> -->
+						<img class="idnex_banner-bg-l-img" src="./images/辉达LOGOpng.png" >
+					<!-- </div> -->
+					<img class="idnex_banner-bg-r" src="./images/san.png" >
+				</div>
+				<!-- 隐藏的列表 -->
+				<div class="index_banner_list">
+					<div class="img">
+						<img class="index_banner_list-img" src="./images/×.png" >
+					</div>
+					<div class="index_banner_list-item">
+						<div class="index_banner_list-items" v-for="item in 5">
+							课程中心
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- 相关信息 -->
@@ -229,14 +240,11 @@
 					高配置学习环境让你安心学习
 				</div>
 				<div class="index_campus-imgs">
-					<div class="index_campus-imgs-img">
-						<img v-for="item in 3" src="./images/location.png">
-					</div>
-					<div class="index_campus-imgs-img">
-						<img v-for="item in 3" src="./images/UIUE设计插图.png">
-					</div>
-					<div class="index_campus-imgs-img">
-						<img v-for="item in 2" src="./images/error.png">
+					<div class="index_campus-imgs-items" v-for="(item,index) in 4" :key="index">
+						<div class="campus-imgs-items-imgs">
+							<img src=""  v-for="(item,index) in 4" :key="index" >
+						</div>
+						<div class="campus-imgs-items-imgs-con">校园环境</div>
 					</div>
 				</div>
 			</div>
