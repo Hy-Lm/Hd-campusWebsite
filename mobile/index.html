@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>辉达教育-北京辉达永盛教育科技有限公司</title>
+				<meta name="keywords" content="辉达永盛教育，求精求强不求大，只做引领和创新。"/>
+				<meta name="description" content="专注IT技术岗前实训、java培训、web前端培训、UI设计培训、优秀IT培训机构、校企共建协同育人。"/>
+				<link rel="icon" href="./images/logos.svg" sizes="50x50">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="./css/public.css">
 		<link rel="stylesheet" href="./css/index.css">
@@ -70,7 +73,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="index_course_button">立即咨询</div>
+				<div class="index_course_button" @click="robotBtn">立即咨询</div>
 			</div>
 			<!-- 课题大纲 -->
 			<div class="index_course index_outline">
@@ -86,8 +89,8 @@
 					<div class="index_outline_navs">
 						<div class="outline_nav" @click="outlineNavs(index)" :key="index"
 							v-for="(item,index) in outline">
-							<img :src="outline_img[index]">
-							<div class="outline_nav_con">{{item.title}}</div>
+							<img :src="item.isActive==true?outline_img[index].iconB:outline_img[index].iconA">
+							<div class="outline_nav_con" :style="{'color': (item.isActive ===true ? '#3258E5':'#333333')}">{{item.title}}</div>
 							<!-- <div :class="[isActive?outline_nav_xian:'outline_nav_xians']"></div> -->
 							<div v-if="item.isActive==true" class="outline_nav_xian"></div>
 						</div>
@@ -117,7 +120,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="index_outline_button">咨询哪个学科更适合你</div>
+				<div class="index_outline_button" @click="robotBtn">咨询哪个学科更适合你</div>
 			</div>
 			<!-- 教研团队 -->
 			<div class="index_course index_research">
@@ -162,7 +165,7 @@
 				</div>
 			</div>
 			
-				<div class="index_research_button">了解更多老师信息</div>
+				<div class="index_research_button" @click="robotBtn">了解更多老师信息</div>
 			</div>
 			<!-- 学员 -->
 			<div class="index_course index_student">
@@ -181,7 +184,7 @@
 							<div class="student_imgs_item-con">{{item.con}}</div>
 						</div>
 					</div>
-					<div class="index_student_button">咨询课程信息</div>
+					<div class="index_student_button" @click="robotBtn">咨询课程信息</div>
 				</div>
 			</div>
 			<!-- 辉达动态 -->
@@ -254,11 +257,11 @@
 			</div>
 			<!-- 固定的底部 -->
 			<div class="footer">
-				<div class="footer-l">
+				<div class="footer-l" @click="robotBtn">
 					<img src="./images/xiaoren.png">
 					<div class="footer-con">我要报名</div>
 				</div>
-				<div class="footer-r">
+				<div class="footer-r" @click="robotBtn">
 					<img src="./images/xiaoxi.png">
 					<div class="footer-con">立即咨询</div>
 				</div>

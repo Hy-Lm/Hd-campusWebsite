@@ -168,8 +168,23 @@ var vm = new Vue({
 				outline: [],
 				outline_nav_title: '',
 				outline_nav_cons_s: [],
-				outline_img: ['./images/UI设计icon.png', './images/java-script.png', './images/web前端icon.png',
-					'./images/软件测试icon.png'
+				outline_img: [
+					{
+						iconA:"./images/UI设计icon.png",
+						iconB:"./images/画笔.svg",
+					},
+					{
+						iconA:"./images/java-script.png",
+						iconB:"./images/java-script.svg",
+					},
+					{
+						iconA:"./images/web前端icon.png",
+						iconB:"./images/8_3前端开发.svg",
+					},
+					{
+						iconA:"./images/软件测试icon.png",
+						iconB:"./images/测试.svg",
+					}
 				],
 				// 师资力量
 				research_lun: [],
@@ -187,6 +202,10 @@ var vm = new Vue({
 				this.faculty()
 			},
 			methods: {
+				// 点击蹦出弹窗
+				robotBtn(){
+					console.log('1');
+				},
 				bannerBg() {
 					this.banner_list = !this.banner_list
 				},
