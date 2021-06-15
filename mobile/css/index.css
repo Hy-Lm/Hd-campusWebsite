@@ -927,6 +927,7 @@ html {
 }
 .campus-imgs-items-imgs>img{
 	width: 50%;
+	height: 1.28rem;
 	/* background-color: red;	 */
 }
 .campus-imgs-items-imgs-con{
