@@ -189,12 +189,6 @@ html {
 	margin-bottom: 0.533333rem;
 }
 
-.index_course_lun {
-	margin-bottom: 0.613333rem;
-	/* padding: 0.226666rem 0; */
-	box-sizing: border-box;
-}
-
 .index_course_button {
 	text-align: center;
 	width: 4.8rem;
@@ -211,43 +205,35 @@ html {
 	letter-spacing: 0.04rem;
 }
 
-.swiper-container {
-	width: 100%;
-	height: 4.293333rem;
-	/* margin: 20px auto; */
+.index_course_lun-c{
+	width: 10rem;
+	height: 4.426666rem;
+	overflow: auto;
+	margin-bottom: 0.4rem;
 }
-
-.swiper-slide {
-	text-align: center;
+.index_course_lun{
+	width: 18.666666rem;
+	height: 4.426666rem;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around !important;
-	/* font-size: 18px; */
-	/* background: #fff; */
-	/* 复制代码 */
-	margin-left: 0.413333rem;
-	width: 3.68rem !important;
+	/* overflow: hidden; */
+}
+ .index_course_lun-c::-webkit-scrollbar {
+        display: none;
+    }
+.index_course_lun-i{
+	padding: 0.266666rem 0;
+	width: 3.68rem;
 	height: 4.293333rem;
 	opacity: 1;
 	background: #ebf5ff;
 	border-radius: 0.16rem;
-	box-shadow: 0px 0.133333rem 0.266666rem 0px rgba(155, 173, 214, 0.46);
-	/* Center slide text vertically */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
+	box-shadow: 0 0.133333rem 0.266666rem 0px rgba(155,173,214,0.46); 
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
 	align-items: center;
-	margin-right: 0.4rem !important;
+	margin:  0 0.466666rem;
 }
-
 .course_item_title {
 	/* width: 1.92rem; */
 	height: 0.533333rem;
@@ -262,11 +248,6 @@ html {
 .course_item_img {
 	width: 1.946666rem;
 	height: 1.533333rem;
-}
-
-.course_item_img>img {
-	/* width: 100%;
-	height: 100%; */
 }
 
 .course_item_btn {
@@ -605,7 +586,99 @@ html {
 	color: #ffffff;
 	letter-spacing: 0.04rem;
 }
-
+/* 老师信息 */
+.index_research-teacher{
+	width: 10rem;
+	height:6.133333rem; 
+	overflow: auto;
+}
+  .index_research_lun {
+	  display: flex;
+      height: 6.133333rem;
+	  margin-top:0.4rem;
+    }
+    .index_research_i {
+        width: 8.32rem !important;
+        height: 6.133333rem;
+		background: #f3f9ff;
+		display: flex;
+		margin: 0 0.4rem;
+    } 
+	.research_i-img{
+		width: 4rem;
+		height: 6.133333rem;
+	}
+	.index_research-teacher::-webkit-scrollbar {
+	       display: none;
+	   }
+	.research_i-img>img{
+		width: 100%;
+		height: 100%;
+	}
+	.research_i-info{
+		width: 4.32rem;
+		padding: 0.16rem;
+		padding-bottom: 0;
+		box-sizing: border-box;
+	}
+	.research_i-info-top{
+		display: flex;
+		justify-content: space-between;
+		height: 0.666666rem;
+		/* padding-bottom: 0.133333rem; */
+		/* opacity: 0.3; */
+		border-bottom: 0.026666rem solid #999999;
+	}
+	.research_i-info-top>div:nth-child(1){
+		opacity: 1;
+		font-size: 0.373333rem;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		text-align: center;
+		color: #333333;
+	}
+	.research_i-info-top>div:nth-child(2){
+		opacity: 1;
+		font-size: 0.266666rem;
+		font-family: PingFang SC, PingFang SC-Regular;
+		font-weight: 400;
+		text-align: center;
+		color: #333333;
+	}
+	.research_i-info-center{
+		display: flex;
+		justify-content: space-around;
+		margin: 0.16rem 0 0.28rem 0;
+	}
+	.research_i-info-center>div{
+		margin: 0 0.133333rem;
+		/* padding: 0.026666rem; */
+		flex: 1;
+		/* width: 1.466666rem; */
+		/* height: 0.4rem; */
+		opacity: 1;
+		background: #3258e5;
+		border-radius: 0.213333rem;
+		font-size: 0.266666rem;
+		font-family: PingFang SC, PingFang SC-Regular;
+		font-weight: 400;
+		text-align: center;
+		color: #ffffff;
+	}
+	.research_i-info-bottom{
+		/* height: ; */
+		flex: 1;
+		opacity: 1;
+		font-size: 0.266666rem;
+		font-family: PingFang SC, PingFang SC-Regular;
+		font-weight: 400;
+		text-align: left;
+		color: #666666;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 10;
+		overflow: hidden;
+	}
 /* 学员 */
 .index_student {
 	margin-top: 0.666666rem;
@@ -749,6 +822,7 @@ html {
 	overflow: hidden;
 }
 .dynamic_info-top-con-item-l{
+	padding: 0.026666rem;
 	width: 0.64rem;
 	height: 0.373333rem;
 	opacity: 1;

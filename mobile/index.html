@@ -4,8 +4,6 @@
 		<meta charset="utf-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-		<!-- Link Swiper's CSS -->
-		<link rel="stylesheet" href="./lib/Swiper-3.3.1/dist/css/swiper.min.css">
 		<link rel="stylesheet" href="./css/public.css">
 		<link rel="stylesheet" href="./css/index.css">
 		<script src="./js/setRem.js"></script>
@@ -54,13 +52,13 @@
 				<div class="index_course_con">
 					完善的课程研发体系紧跟技术发展及企业需求
 				</div>
-				<div class="swiper-container index_course_lun ">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" v-for="(item,index) in course_item" :key="index">
+				<div class="index_course_lun-c">
+					<div class="index_course_lun">
+						<div class="index_course_lun-i" v-for="(item,index) in course_item" :key="index">
 							<div class="course_item_title">{{item.con}}</div>
-							<div class="course_item_img">
-								<img :src="item.img" alt="image">
-							</div>
+							<!-- <div class="course_item_img"> -->
+								<img class="course_item_img" :src="item.img" alt="image">
+							<!-- </div> -->
 							<div class="course_item_btn">
 								<img src="./images/课程大纲icon.png" alt="image">
 								<span>课程大纲</span>
@@ -142,13 +140,28 @@
 					</div>
 				</div>
 				<!-- 老师信息 -->
-			<div class="swiper-container1 index_research_lun ">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide index_research_i" v-for="(item,index) in research_lun" :key="index">
-						1
+			<div class="index_research-teacher">
+				<div class="index_research_lun">
+					<div class="index_research_i" v-for="(item,index) in research_lun" :key="index">
+						<div class="research_i-img">
+							<img :src="urlImg+item.img" >
+						</div>
+						<div class="research_i-info">
+							<div class="research_i-info-top">
+								<div>{{item.user}}</div>
+								<div>教学负责人</div>
+							</div>
+							<div class="research_i-info-center">
+								<div :key="index" v-for="(item,index) in research_lun_class[index]">{{item}}</div>
+							</div>
+							<div class="research_i-info-bottom">
+								{{item.intro}}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			
 				<div class="index_research_button">了解更多老师信息</div>
 			</div>
 			<!-- 学员 -->
@@ -252,6 +265,5 @@
 			</div>
 		</div>
 	</body>
-	<script src="lib/Swiper-3.3.1/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>
