@@ -589,7 +589,7 @@ html {
 /* 老师信息 */
 .index_research-teacher{
 	width: 10rem;
-	height:6.133333rem; 
+	/* height:6.133333rem; */
 	overflow: auto;
 }
   .index_research_lun {
@@ -598,6 +598,7 @@ html {
 	  margin-top:0.4rem;
     }
     .index_research_i {
+		padding-top:0.4rem ;
         width: 8.32rem !important;
         height: 6.133333rem;
 		background: #f3f9ff;
@@ -613,7 +614,7 @@ html {
 	   }
 	.research_i-img>img{
 		width: 100%;
-		height: 100%;
+		/* height: 100%; */
 	}
 	.research_i-info{
 		width: 4.32rem;
