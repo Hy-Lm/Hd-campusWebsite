@@ -236,6 +236,7 @@ html {
 	text-align: center;
 	width: 4.8rem;
 	height: 0.853333rem;
+	line-height: 0.653333rem;
 	padding-top: 0.16rem;
 	opacity: 1;
 	background: #3258e5;
@@ -504,6 +505,7 @@ html {
 .index_outline_button {
 	width: 4.8rem;
 	height: 0.853333rem;
+	line-height: 0.653333rem;
 	padding-top: 0.16rem;
 	opacity: 1;
 	background: #3258e5;
@@ -618,6 +620,7 @@ html {
 	margin-top: 0.533333rem;
 	width: 4.8rem;
 	height: 0.853333rem;
+	line-height: 0.653333rem;
 	padding-top: 0.16rem;
 	opacity: 1;
 	background: #3258e5;
@@ -818,6 +821,7 @@ html {
 	padding-top: 0.16rem;
 	width: 4.8rem;
 	height: 0.853333rem;
+	line-height: 0.653333rem;
 	opacity: 1;
 	background: #ffffff;
 	border-radius: 0.426666rem;
