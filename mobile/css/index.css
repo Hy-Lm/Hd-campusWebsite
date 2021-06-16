@@ -884,6 +884,7 @@ html {
 .dynamic_info-top-con-item-r-con{
 	width: 4.346666rem;
 	height: 0.8rem;
+	line-height:0.4rem ;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
