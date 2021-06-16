@@ -263,7 +263,7 @@ html {
 	box-shadow: 0 0.133333rem 0.266666rem 0px rgba(155,173,214,0.46); 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	margin:  0 0.466666rem;
 }
@@ -279,8 +279,8 @@ html {
 }
 
 .course_item_img {
-	width: 1.946666rem;
-	height: 1.533333rem;
+	/* width: 1.946666rem; */
+	/* height: 1.533333rem; */
 }
 
 .course_item_btn {
@@ -294,6 +294,7 @@ html {
 	background: #3258e5;
 	border-radius: 0.266666rem;
 	table-layout: fixed;
+	margin: 0.066666rem 0;
 }
 
 .course_item_btn>img {
@@ -339,7 +340,7 @@ html {
 .outline_nav img {
 	vertical-align: middle;
 	width: 0.28rem;
-	height: 0.306666rem;
+	/* height: 0.306666rem; */
 	margin-right: 0.066666rem;
 	/* background-color: aliceblue; */
 }
@@ -623,15 +624,16 @@ html {
 .index_research-teacher{
 	width: 10rem;
 	/* height:6.133333rem; */
-	overflow: auto;
+	overflow-x: auto;
 }
   .index_research_lun {
 	  display: flex;
-      height: 6.133333rem;
+      /* height: 6.133333rem; */
 	  margin-top:0.4rem;
     }
     .index_research_i {
-		padding-top:0.4rem ;
+		/* padding:0.4rem 0; */
+		box-sizing: border-box;
         width: 8.32rem !important;
         height: 6.133333rem;
 		background: #f3f9ff;
@@ -735,20 +737,20 @@ html {
 	padding: 0.4rem;
 	margin-top: 0.4rem;
 	width: 10rem;
-	height: 11.226666rem;
+	height: 12.226666rem;
 	opacity: 1;
 	background: #3258e5;
 }
 
 .student_imgs_item {
 	width: 25%;
+	height: 3.066666rem;
 	/* float: left; */
 	margin-bottom: 0.2rem;
 	/* text-align: center; */
 }
-
 .index_student_imgs-i {
-	height: 9.333333rem;
+	height: 9.92rem;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;

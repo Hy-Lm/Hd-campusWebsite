@@ -170,19 +170,19 @@ var vm = new Vue({
 				outline_nav_cons_s: [],
 				outline_img: [
 					{
-						iconA:"./images/UI设计icon.png",
+						iconA:"./images/画笔s.svg",
 						iconB:"./images/画笔.svg",
 					},
 					{
-						iconA:"./images/java-script.png",
+						iconA:"./images/java-scripts.svg",
 						iconB:"./images/java-script.svg",
 					},
 					{
-						iconA:"./images/web前端icon.png",
+						iconA:"./images/8_3前端开发s.svg",
 						iconB:"./images/8_3前端开发.svg",
 					},
 					{
-						iconA:"./images/软件测试icon.png",
+						iconA:"./images/测试s.svg",
 						iconB:"./images/测试.svg",
 					}
 				],
