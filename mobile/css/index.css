@@ -197,6 +197,16 @@ html {
 	color: #333333;
 	margin-bottom: 0.106666rem;
 }
+.yuan{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0.24rem;
+	height: 0.24rem;
+	opacity: 0.3;
+	background: #ffe290;
+	border-radius: 0.133333rem;
+}
 .index_course_title {
 	position: relative;
 	/* width: 1.92rem; */
@@ -628,6 +638,8 @@ html {
 }
   .index_research_lun {
 	  display: flex;
+	  overflow-x: scroll;
+	  overflow-y: hidden;
       /* height: 6.133333rem; */
 	  margin-top:0.4rem;
     }
@@ -823,7 +835,7 @@ html {
 	background: #ebf5ff
 }
 .dynamic_info-top-title{
-	width: 1.493333rem;
+	/* width: 1.493333rem; */
 	height: 0.533333rem;
 	opacity: 1;
 	font-size: 0.373333rem;
@@ -929,7 +941,7 @@ html {
 	color: #666666;
 }
 .index_dynamic_info-bottom-title{
-	width: 1.493333rem;
+	/* width: 1.493333rem; */
 	height: 0.533333rem;
 	opacity: 1;
 	font-size: 0.373333rem;
@@ -988,7 +1000,7 @@ html {
 }
 /* 简介 */
 .index_synopsis{
-	margin-top: 0.72rem;
+	margin-top: 0.52rem;
 	width: 100%;
 	text-align: center;
 	opacity: 1;
