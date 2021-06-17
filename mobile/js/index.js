@@ -115,7 +115,7 @@ var vm = new Vue({
 					},
 					{
 						con: '教学资料 笔记资源赠送',
-						img: 'images/design.png'
+						img: 'images/delivery.png'
 					},
 					{
 						con: '学长学姐 就业经验分享',
@@ -123,7 +123,7 @@ var vm = new Vue({
 					},
 					{
 						con: '主题讲座 定期分享',
-						img: 'images/delivery.png'
+						img: 'images/design.png'
 					},
 					{
 						con: '线下学员 分享会',
@@ -151,11 +151,11 @@ var vm = new Vue({
 					},
 					{
 						con: '九大基站 就业帮助服务',
-						img: 'images/design.png'
+						img: 'images/301532c26847f96f2bbe2a49e97e62f.png'
 					},
 					{
 						con: '点击   查看更多...',
-						img: 'images/design.png'
+						img: 'images/location.png'
 					}
 				],
 				// 校园环境

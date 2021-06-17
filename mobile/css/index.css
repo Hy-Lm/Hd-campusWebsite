@@ -775,7 +775,7 @@ html {
 .index_student_imgs-i {
 	height: 9.92rem;
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
@@ -792,13 +792,15 @@ html {
 	text-align: center;
 	line-height: 1.866666rem;
 }
-
 .student_imgs_item-img>img {
 	margin-top: 0.24rem;
-	/* width: 1.333333rem;
-	height: 1.333333rem; */
+	/* width: 0.853333rem; */
+	/* height:0.453333rem; */
 	opacity: 1;
 	background: rgba(0, 0, 0, 0.00);
+}
+.student_imgs_item:nth-child(3) img{
+	margin-top: 0.133333rem;
 }
 
 .student_imgs_item-con {
