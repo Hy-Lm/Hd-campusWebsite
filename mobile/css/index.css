@@ -967,12 +967,13 @@ html {
 }
 /* 校园环境 */
 .index_campus{
-	margin-bottom:0.4rem;
+	/* margin-bottom:0.4rem; */
 	padding-bottom: 0;
 }
 .index_campus_con{
 	text-align: center;
 }
+
 .index_campus-imgs{
 	padding: 0 0.4rem;
 	box-sizing: border-box;
@@ -1050,6 +1051,7 @@ html {
 	justify-content: center;
 	align-items: center;
 }
+
 .footer img{
 	width: 0.413333rem;
 	height: 0.386666rem;
