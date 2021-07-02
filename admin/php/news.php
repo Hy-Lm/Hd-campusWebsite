@@ -23,7 +23,7 @@
 				unset($titleObj['titles_img']);
 				unset($titleObj['title_con']);
 				$myArray['data1']= (object) array('big_title'=>'学科资讯','all' =>array_reverse($titleObj)); //将多个对象添加给一个数组给数组
-				$sql1="select * from news where big_title='技术文章'";
+				$sql1="select * from news where big_title='学员故事'";
 				$res1=$conn->query($sql1);
 				while($row=$res1->fetch_assoc()){
 					$titleObj1['titles']=$row['small_title'];
@@ -43,7 +43,7 @@
 				unset($titleObj1['titles']);
 				unset($titleObj1['titles_img']);
 				unset($titleObj1['title_con']);
-				$myArray['data2']= (object) array('big_title'=>'技术文章','all' =>array_reverse($titleObj1));
+				$myArray['data2']= (object) array('big_title'=>'学员故事','all' =>array_reverse($titleObj1));
 				
 				$sql2="select * from news where big_title='常见问题'";
 				$res2=$conn->query($sql2);

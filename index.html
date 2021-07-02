@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>辉达教育-北京辉达永盛教育科技有限公司</title>
+		<title>IT教育选辉达IT,辉达IT教育助你成功走向高薪--辉达IT教育官网</title>
 		<meta name="keywords" content="辉达永盛教育，求精求强不求大，只做引领和创新。"/>
-		<meta name="description" content="专注IT技术岗前实训、java培训、web前端培训、UI设计培训、优秀IT培训机构、校企共建协同育人。"/>
+		<meta name="description" content="辉达IT教育国内良心品牌，辉达IT教育有多年的外包项目经验，开设培训班JAVA,UI设计，全栈，网站测试等多种课程，登陆官网，了解更多培训课程（https://www.hd512.com)"/>
 		<link rel="icon" href="./images/logos.svg" sizes="50x50">
 		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 		<script src="./js/axios.min.js"></script>
@@ -23,7 +23,7 @@
 			</div>
 			<div id="nav">
 				<div class="top_logo">
-					<img src="./images/横版logo—辉达.svg" alt="">
+					<img src="./admin/php/images/06499ce8logos.png" alt="" style="width: 100%;">
 				</div>
 				<div style=" display: flex;align-items: center;justify-content: space-around;">
 					<div @click="skip(index)" class="nav_box" v-for="(item,index) in itemNam" @click="topTextClick(item)">{{item}}
@@ -44,7 +44,7 @@
 					<div id="top">
 						<div class="top lat">
 							<div class="top_logo">
-								<img src="./images/横版logo—辉达.svg" alt="">
+								<img src="./admin/php/images/06499ce8logos.png" alt="" style="width: 100%;">
 							</div>
 							<div class="top_text" v-if="textShow==true">
 								<div @click="skip(index)"  v-for="(item,index) in itemNam" class="top_text-div" @click="topTextClick(item)">{{item}}
@@ -543,12 +543,12 @@
 								<p>扫码添加客服咨询</p>
 							</div>
 							<div style="width: 100%; margin-left: 40px;">
-								联系方式:13341088022
+								联系方式:19932677142
 							</div>
 						</div>
 					</div>
 					<div class="footingBox">
-						北京辉达IT科技有限公司 版权所有Copyright 2006-2021, All Rights Reserved 京ICP备13009754号
+						北京辉达永盛教育科技有限公司 版权所有Copyright 2006-2021  All Rights Reserved 京ICP备13009754号
 					</div>
 				</div>
 			</div>
@@ -561,7 +561,7 @@
 				data: {
 					// imgUrl:"http://www.hd512.com/admin/php/images/",
 					// url:"http://localhost/hd_guanwang/admin/php/",
-					url:"http://www.hd512.com/admin/php/",
+					url:"https://www.hd512.com/admin/php/",
 					imgSrc:'./admin/php/images/',
 					uploadShow:false,
 					teamTalents: [ //人才培训及发展计划
@@ -1373,11 +1373,35 @@
 					},
 					
 					IcsWebSdkJs(){
-						IcsWebSdkJs.show()
-						console.log($(".chat"),"OAUS哦还afahdsofahof")
+						
 					}
 				},
 				mounted() {
+					
+					var system = {};
+					 
+					var p = navigator.platform;
+					 
+					console.log(p);
+					 
+					system.win = p.indexOf("Win") == 0;
+					 
+					system.mac = p.indexOf("Mac") == 0;
+					 
+					if (system.win || system.mac) {//如果是电脑
+					 
+						
+					 
+					} else { //如果是手机,
+						this.uploadShow=false
+						location.replace("https://www.hd512.com/mobile")
+						return false
+					 
+					}
+					
+					
+					
+					
 					console.log($(".code-msg"),"OAUS哦还afahdsofahof")
 					$(document).scroll(function(){
 						let scroll=$(document).scrollTop()
@@ -1446,8 +1470,7 @@
 						}, 2000)
 					// 接口地址
 					// 轮播图
-					IcsWebSdkJs.init('https://bot.4paradigm.com/web/chat/29186/38e86931-4096-4c0c-aeef-d1331f07e93f')
-					this.IcsWebSdkJs()
+					
 					let carouse=this.url+"banners.php?id=5"
 					axios.get(carouse).then(data => {
 						if(data.status==200){

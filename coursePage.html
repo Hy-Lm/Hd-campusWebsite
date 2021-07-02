@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>辉达教育-北京辉达永盛教育科技有限公司</title>
+		<title>IT教育选辉达IT,辉达IT教育助你成功走向高薪--辉达IT教育官网</title>
 		<meta name="keywords" content="辉达永盛教育，求精求强不求大，只做引领和创新。"/>
-		<meta name="description" content="专注IT技术岗前实训、java培训、web前端培训、UI设计培训、优秀IT培训机构、校企共建协同育人。"/>
+		<meta name="description" content="辉达IT教育国内良心品牌，辉达IT教育有多年的外包项目经验，开设培训班JAVA,UI设计，全栈，网站测试等多种课程，登陆官网，了解更多培训课程（https://www.hd512.com)"/>
 		<link rel="icon" href="./images/logos.svg" sizes="50x50">
 		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 		<script src="./js/axios.min.js"></script>
@@ -28,7 +28,7 @@
 					<!-- 轮播 -->
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide" v-for="item in srcImg">
+							<div class="swiper-slide" v-for="item in srcImg" @click="IcsWebSdkJs">
 								<img :src="item" alt="" style="width: 100%;">
 							</div>
 						</div>
@@ -568,12 +568,12 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 								<p>扫码添加客服咨询</p>
 							</div>
 							<div style="width: 100%; margin-left: 40px;">
-								联系方式:13341088022
+								联系方式:19932677142
 							</div>
 						</div>
 					</div>
 					<div class="footingBox">
-						北京辉达IT科技有限公司 版权所有Copyright 2006-2021, All Rights Reserved 京ICP备13009754号
+						北京辉达永盛教育科技有限公司 版权所有Copyright 2006-2021  All Rights Reserved 京ICP备13009754号
 					</div>
 				</div>
 			</div>
@@ -593,7 +593,7 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 						],//所有发展路径图片
 						uploadShow: false,
 						// url:"http://localhost/hd_guanwang/admin/php/",
-						url:"http://www.hd512.com/admin/php/",
+						url:"https://www.hd512.com/admin/php/",
 						searchIndex: 1,
 						topLogo: "Java大数据",
 						teamBoxItem: [ //人才筛选4项标准
@@ -1157,7 +1157,7 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 					},
 					methods: {
 						IcsWebSdkJs(){
-							IcsWebSdkJs.show()
+							
 						},
 						more(){//点击更多
 							window.open("./MorePages.html");
@@ -1227,9 +1227,7 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 						}
 					},
 					mounted() {
-						// 客服
-						IcsWebSdkJs.init('https://bot.4paradigm.com/web/chat/29186/38e86931-4096-4c0c-aeef-d1331f07e93f')
-						this.IcsWebSdkJs()
+						
 						console.log($(".code-msg"),"OAUS哦还afahdsofahof")
 						// $(".code-msg").css({
 						// 	"display":"none"
@@ -1276,6 +1274,7 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 								datas.forEach(item=>{
 									this.srcImg.push(this.imgSrc+item)
 								})
+								console.log(this.srcImg)
 							}
 						})
 						// 课程大纲outlines: 
