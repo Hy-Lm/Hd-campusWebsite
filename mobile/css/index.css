@@ -121,7 +121,8 @@ html {
 	/* background-color: aliceblue; */
 }
 .index_crotchety_item:nth-child(3) img{
-	height: 0.426666rem;
+	width: 0.32rem;
+	height:0.373333rem;
 }
 .index_crotchety_item .index_crotchety_con {
 	opacity: 1;
