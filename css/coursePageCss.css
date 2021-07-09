@@ -13,6 +13,7 @@
 	background: #4a4a4a;
 }
 
+
 html {
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -26,12 +27,81 @@ img {
 	width: 100%;
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+	
+	.lat {
+		width: 1200px !important;
+		margin: 0 auto;
+	}
+	.dian {
+		width: 1000px !important;
+		left: 95px !important;
+	}
+	.stagger>li:nth-child(1) {
+	    left: 40px !important;
+	}
+	.stagger>li:nth-child(2) {
+	    left: 175px !important;
+	}
+	.stagger>li:nth-child(3) {
+	    left: 310px !important;
+	}
+	.stagger>li:nth-child(4) {
+	    left: 410px !important;
+	}
+	.stagger>li:nth-child(5) {
+	    left: 550px !important;
+	}
+	.stagger>li:nth-child(6) {
+	    left: 670px !important;
+	}
+	.stagger>li:nth-child(7) {
+	    left: 800px !important;
+	}
+	.stagger>li:nth-child(8) {
+	    left: 900px !important;
+	}
+	.stagger>li:nth-child(9) {
+	    left: 1035px !important;
+	}
+	.TheWholeLink span {
+		display: none;
+	}
+	.boxP{
+		display: block !important; 
+	}
+	.teamTalentsBoxBbBox{
+		width: 118px !important;
+	}
+	.projectBoxItem {
+		transform:scale(0.8,0.8);
+		margin-top: -40px;
+	}
+	.progressItemZi{
+		transform:scale(0.9,0.9);
+	}
+	.projectWire{
+		width: 970px !important;
+		margin-left: -489px !important;
+	} 
+	.obtain-list_item{
+		width: 380px !important;
+	}
+}
 .lat {
 	width: 1400px;
-	margin: 0 auto
+	margin: 0 auto;
 }
-
-;
+.boxP{
+		margin-bottom: 20px;
+		display: none;
+}
+.teamTalentsBoxBbBox{
+	text-align: center; width: 140px; height: 100%; padding-top: 20px;
+}
+.teamTalentsBoxBbBox span{
+	margin: 0 auto; display: block; width: 68px; height: 80px; font-size: 57px; color:rgba(12,45,99,1); text-align: center;
+}
 
 #app {
 	width: 100%;
@@ -813,7 +883,7 @@ img {
 }
 
 .safeguardBoxDiv {
-	width: 50%;
+	width: calc(50% - 80px);
 	height: 100%;
 	/* border: 1px solid #f00; */
 	padding: 0 40px;
@@ -842,7 +912,7 @@ img {
 	color: #ACACAC;
 	line-height: 160px;
 	left: 50%;
-	margin-left: -140px;
+	margin-left: -95px;
 }
 
 .safeguard {
@@ -986,13 +1056,13 @@ img {
 
 /* 资讯 */
 .dynamicBox_divB {
-	width: 38%;
+	width: 100%;
 	font-size: 18px;
 	color: #848484;
 }
 
 .dynamicTitle {
-	width: 436px;
+	width: 100%;
 	height: 250px;
 	font-family: SourceHanSansSC-regular;
 	display: -webkit-box;

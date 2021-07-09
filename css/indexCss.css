@@ -12,7 +12,66 @@ img {
 	/* width: 100%; */
 }
 
-
+@media screen and (max-width: 1400px) {
+ .lat {
+ 	width: 1400px;
+ 	margin: 0 auto;
+ }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+	
+	.lat {
+		width: 1200px !important;
+	}
+	.synopsis_content{
+		width: 290px !important;
+		height: 360px !important;
+	}
+	.synopsis_content_div {
+	    width: 147px !important;
+	    height: 68px !important;
+	    margin: 76px auto 0;
+	}
+	.synopsis_content_b{
+		width: 292px !important;
+		padding-top: 52px !important;
+		height: calc(100% - 50px) !important;
+	}
+	.synopsis_content_b h4{
+		margin-bottom: 50px !important;
+	}
+	.synopsis_content_b_btn{
+		transform:scale(0.8,0.8);
+		margin: 0 auto !important;
+	}
+	.synopsis_content_a{
+		padding-top: 50px !important;
+		height: calc(100% - 52px) !important;
+	}
+	.xian{
+		width: 1050px !important;
+	}
+	.teamTalentsBoxBb_box{
+		width: 118px !important;
+	}
+	.campusImg{
+		width: 388px !important;
+	}
+	#echarts{
+		width: 800px !important;
+		
+	}
+	#box{
+		left:-100px !important;
+	}
+}
+/* transform scale(x,y)*/
+#box{
+	width: 600px; position: relative; left:-140px;
+}
+#echarts{
+	width: 1000px; height: 800px; text-align: center;
+}
 .lat {
 	width: 1400px;
 	margin: 0 auto;
@@ -253,7 +312,6 @@ img {
 	height: calc(100% - 84px);
 	background: #fff;
 	padding-top: 86px;
-	background: ;
 	/* border: 1px solid #bbb; */
 }
 
@@ -328,7 +386,7 @@ img {
 	align-items: center;
 	/* justify-content: center; */
 	margin: 60px auto;
-	width: 1420px;
+	/* width: 1420px; */
 }
 
 .outline_box {
@@ -336,7 +394,7 @@ img {
 	position: relative;
 	color: rgba(12, 45, 99, 1);
 	padding-left: 10px;
-	/* border-left: 12px solid rgba(50,88,229,0.3); */
+	border-left: 12px solid rgba(50,88,229,0.3);
 }
 
 .outline_box h4 {
@@ -535,6 +593,12 @@ img {
 	color: #fff;
 }
 
+.teamTalentsBoxBb_box{
+	text-align: center; width: 140px; height: 100%; padding-top: 20px;
+}
+.teamTalentsBoxBb_box span{
+	margin: 0 auto; display: block; width: 68px; height: 80px; font-size: 57px; color:rgba(12,45,99,1); text-align: center;
+}
 /* .teamTalentsBox {
 	border: 1px solid #bbb;
 	overflow: hidden;
@@ -704,7 +768,7 @@ img {
 
 .campusNavTopDiv:first-child {
 	padding-top: 6px;
-	border-top: 4px solid #000;
+	border-top: 4px solid #3258E5;
 	color:#3258E5;
 }
 

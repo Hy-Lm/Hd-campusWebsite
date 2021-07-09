@@ -117,7 +117,7 @@
 						style="position: absolute; top:-3px; left:20px;width: 32px; height: 32px; background: rgba(78,108,194,.4); border-radius: 50%;">
 					</div>
 				</div>
-x				<div class="develop lat" v-if="developImg[0]!=''">
+				<div class="develop lat" v-if="developImg[0]!=''">
 					<div class="developItem">
 						<div class="developItemBox">
 							<div class="developItemImg">
@@ -247,6 +247,10 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 						style="position: absolute; top:-3px; left:20px;width: 32px; height: 32px; background: rgba(78,108,194,.4); border-radius: 50%;">
 					</div>
 				</div>
+				<p class="lat boxP">
+					<span
+						style="margin-left: 10px; color:#6E6E6E;">由50多位专职教研团队设计，推出深技术、企业级、高标准的全链路+UI/UE设计项目课程，制定真项目标准，并且建立可以免费体验的在线“项目库”</span>
+				</p>
 				<div class="progress lat">
 					<div class="progressItem">
 						<div class="progressItemZi" v-for="item in progressBoxItem" >
@@ -360,6 +364,11 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 						style="position: absolute; top:-3px; left:20px;width: 32px; height: 32px; background: rgba(78,108,194,.4); border-radius: 50%;">
 					</div>
 				</div>
+				<p class="lat boxP">
+					<span
+						style="margin-left: 10px; color:#6E6E6E;">年薪80万持续引入大厂技术大牛，建立全链路+UI/UE设计专职课研团队及专职教学团队，制定严格师资筛选培训体系，不断提高行业课程标准及教学质量</span>
+					
+				</p>
 				<div class="teachers lat">
 					<div class="teamTop">
 						<div class="teamTopItemz lat">
@@ -410,9 +419,10 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 						</h4>
 						<div class="teamTalentsBoxBb" style="margin-left:25px;">
 							<div v-for="(item,index) in teamItem"
-								style="text-align: center; width: 140px; height: 100%; padding-top: 20px;">
+							class="teamTalentsBoxBbBox"
+								style="">
 								<span
-									style="margin: 0 auto; display: block; width: 68px; height: 80px; font-size: 57px; color:rgba(12,45,99,1); text-align: center;">0{{index+1}}</span>{{item}}
+									style="">0{{index+1}}</span>{{item}}
 							</div>
 						</div>
 					</div>
@@ -573,7 +583,7 @@ x				<div class="develop lat" v-if="developImg[0]!=''">
 						</div>
 					</div>
 					<div class="footingBox">
-						北京辉达永盛教育科技有限公司 版权所有Copyright 2006-2021  All Rights Reserved 京ICP备13009754号
+						北京辉达永盛教育科技有限公司 版权所有Copyright 2006-2021  All Rights Reserved 京ICP备13009754号-3
 					</div>
 				</div>
 			</div>
