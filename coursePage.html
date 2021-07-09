@@ -587,8 +587,9 @@
 					</div>
 				</div>
 			</div>
-			<script src="js/swiper.min.js"></script>
+			
 			<script src="js/vue.js"></script>
+			<script src="js/swiper.min.js"></script>
 			<script>
 				var vm = new Vue({
 					el: "#coursePage",
@@ -1234,7 +1235,20 @@
 								'color': '#fff'
 							})
 							this.answerArea = val
-						}
+						},
+						swiper(){
+						setTimeout(function() {
+							new Swiper('.swiper-container', {
+								loop: true,
+								pagination: '.swiper-pagination',
+								autoplay: 3000,
+								paginationClickable: true,
+								autoplayDisableOnInteraction: false,
+								observer: true,
+								observerParents: true
+							})
+						}, 500)
+					},
 					},
 					mounted() {
 						
@@ -1286,6 +1300,7 @@
 								})
 								console.log(this.srcImg)
 							}
+							this.swiper()
 						})
 						// 课程大纲outlines: 
 						let outlineUrl = this.url + "ui_course_center.php?title=" + this.topLogo
@@ -1365,16 +1380,6 @@
 
 					}
 				})
-			</script>
-			<script>
-				var swiper = new Swiper('.swiper-container', {
-					nextButton: '.swiper-button-next',
-					prevButton: '.swiper-button-prev',
-					paginationClickable: true,
-					centeredSlides: true,
-					autoplay: 3000,
-					autoplayDisableOnInteraction: false
-				});
 			</script>
 	</body>
 </html>

@@ -448,6 +448,19 @@ var vm = new Vue({
 					
 				},
 				methods: {
+					swiper(){
+						setTimeout(function() {
+							new Swiper('.swiper-container', {
+								loop: true,
+								pagination: '.swiper-pagination',
+								autoplay: 3000,
+								paginationClickable: true,
+								autoplayDisableOnInteraction: false,
+								observer: true,
+								observerParents: true
+							})
+						}, 500)
+					},
 					skip(index){
 						console.log(index)
 						console.log($(document).scrollTop())
@@ -937,6 +950,7 @@ var vm = new Vue({
 						})
 						// console.log(datas)
 						this.teacherItem=datas
+						this.swiper()
 					})
 					// 课程大纲
 					let url=this.url+"course_center.php?id=all"
