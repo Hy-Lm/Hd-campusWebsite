@@ -116,11 +116,13 @@ html {
 .index_crotchety_item img {
 	vertical-align: middle;
 	width: 0.413333rem;
-	height: 0.373333rem;
+	height: 0.36rem;
 	margin-right: 0.066666rem;
 	/* background-color: aliceblue; */
 }
-
+.index_crotchety_item:nth-child(3) img{
+	height: 0.426666rem;
+}
 .index_crotchety_item .index_crotchety_con {
 	opacity: 1;
 	font-size: 0.32rem;
@@ -288,12 +290,16 @@ html {
 	text-align: center;
 	color: #333333;
 }
-
 .course_item_img {
-	/* width: 1.946666rem; */
-	/* height: 1.533333rem; */
+	width: 1.946666rem;
+	height: 1.546666rem;
 }
-
+.index_course_lun-i:nth-child(1) .course_item_img{
+	height: 1.8rem;
+}
+.index_course_lun-i:nth-child(3) .course_item_img{
+	width:2.4rem;
+}
 .course_item_btn {
 	padding: 0 0.266666rem;
 	box-sizing: border-box;
@@ -350,7 +356,7 @@ html {
 }
 .outline_nav img {
 	vertical-align: middle;
-	width: 0.28rem;
+	width: 0.3rem;
 	/* height: 0.306666rem; */
 	margin-right: 0.066666rem;
 	/* background-color: aliceblue; */
@@ -763,6 +769,9 @@ html {
 	height: 12.226666rem;
 	opacity: 1;
 	background: #3258e5;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .student_imgs_item {
@@ -794,10 +803,14 @@ html {
 }
 .student_imgs_item-img>img {
 	margin-top: 0.24rem;
-	/* width: 0.853333rem; */
-	/* height:0.453333rem; */
+	width: 1.306666rem;
+	height: 1.306666rem;
 	opacity: 1;
 	background: rgba(0, 0, 0, 0.00);
+}
+.student_imgs_item:nth-child(2) img{
+	width: 0.906666rem;
+	height: 0.906666rem;
 }
 .student_imgs_item:nth-child(3) img{
 	margin-top: 0.133333rem;

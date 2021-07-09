@@ -10,73 +10,73 @@ var vm = new Vue({
 				banner_list_items: ['课程中心', '师资力量', '课程大纲', '辉达精神', '关于辉达'],
 				// 相关信息
 				crotchety_item: [{
-						img: './images/send%20inquiry.png',
+						img: './images/send inquiry@3x.png',
 						con: '学费价格'
 					},
 					{
-						img: './images/confirm.png',
+						img: './images/confirm@3x.png',
 						con: '开班信息'
 					},
 					{
-						img: './images/operation.png',
+						img: './images/operation@3x.png',
 						con: '入学攻略'
 					},
 					{
-						img: './images/image-text.png',
+						img: './images/image-text@3x.png',
 						con: '学员信息'
 					}
 				],
 				// 课程中心
 				course_item: [{
-						img: './images/Java大数据插图.png',
+						img: './images/Java大数据插图@3x.png',
 						con: 'Java大数据'
 					},
 					{
-						img: './images/web前端插图.png',
+						img: './images/web前端插图@3x.png',
 						con: 'Web前端'
 					},
 					{
-						img: './images/UIUE设计插图.png',
+						img: './images/UIUE设计插图@3x.png',
 						con: 'UIUE设计'
 					},
 					{
-						img: './images/软件测试插图.png',
+						img: './images/软件测试插图@3x.png',
 						con: '软件测试'
 					}
 				],
 				// 项目特色
 				outline_feature_item: [{
-						img: "./images/icon-rgb_全行业.png",
+						img: "./images/icon-rgb_全行业@3x.png",
 						con: '全行业',
 						content1: '20+热门行业覆盖',
 						content2: '领跑行业'
 					},
 					{
-						img: "./images/icon-rgb_高标准.png",
+						img: "./images/icon-rgb_高标准@3x.png",
 						con: '高标准',
 						content1: '大型研发项目',
 						content2: '大厂深度共建'
 					},
 					{
-						img: "./images/icon-rgb_真场景.png",
+						img: "./images/icon-rgb_真场景@3x.png",
 						con: '真场景',
 						content1: '完整商业模式',
 						content2: '真实业务模型'
 					},
 					{
-						img: "./images/icon-rgb_深技术.png",
+						img: "./images/icon-rgb_深技术@3x.png",
 						con: '深技术',
 						content1: '深度技术刨析',
 						content2: '贴合市场主流'
 					},
 					{
-						img: "./images/icon-rgb_快更新.png",
+						img: "./images/icon-rgb_快更新@3x.png",
 						con: '快更新',
 						content1: '热门项目月更新',
 						content2: '前沿技术周更新'
 					},
 					{
-						img: "./images/icon-rgb_严保障.png",
+						img: "./images/icon-rgb_严保障@3x.png",
 						con: '严保障',
 						content1: '12项评审流程',
 						content2: '4项验收标准'
@@ -111,51 +111,51 @@ var vm = new Vue({
 				// 学员
 				student_imgs_item: [{
 						con: '一份面试可用的作品',
-						img: 'images/data.png'
+						img: 'images/data@3x.png'
 					},
 					{
 						con: '教学资料 笔记资源赠送',
-						img: 'images/delivery.png'
+						img: 'images/delivery@3x.png'
 					},
 					{
 						con: '学长学姐 就业经验分享',
-						img: 'images/code.png'
+						img: 'images/code@3x.png'
 					},
 					{
 						con: '主题讲座 定期分享',
-						img: 'images/design.png'
+						img: 'images/design@3x.png'
 					},
 					{
 						con: '线下学员 分享会',
-						img: 'images/we-are-hiring.png'
+						img: 'images/we-are-hiring@3x.png'
 					},
 					{
 						con: '大学式教学 公开课',
-						img: 'images/no-messages.png'
+						img: 'images/no-messages@3x.png'
 					},
 					{
 						con: '及时获取 课程内容更新',
-						img: 'images/success.png'
+						img: 'images/success@3x.png'
 					},
 					{
 						con: '企业内推 就业机会',
-						img: 'images/product-launch.png'
+						img: 'images/product-launch@3x.png'
 					},
 					{
 						con: '高质量 人脉圈子',
-						img: 'images/error.png'
+						img: 'images/error@3x.png'
 					},
 					{
 						con: '就业后工作问题 跟踪解答',
-						img: 'images/searching.png'
+						img: 'images/searching@3x.png'
 					},
 					{
 						con: '九大基站 就业帮助服务',
-						img: 'images/301532c26847f96f2bbe2a49e97e62f.png'
+						img: 'images/图标12.12@3x.png'
 					},
 					{
 						con: '点击   查看更多...',
-						img: 'images/location.png'
+						img: 'images/location@3x.png'
 					}
 				],
 				// 校园环境
