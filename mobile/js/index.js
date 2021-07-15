@@ -276,6 +276,19 @@ var vm = new Vue({
 						// console.log(res)
 						this.research_lun = res.data
 					})
-				}
+				},
+				topTextClick(val) {
+					alert("点击了" + val)
+					
+				},
+				skip(index){
+					console.log(index)
+					console.log($(document).scrollTop())
+					if(index==0) $(document).scrollTop("280")
+					if(index==1) $(document).scrollTop("1335")
+					if(index==2) $(document).scrollTop("600")
+					if(index==3) $(document).scrollTop("2440")
+					if(index==4) $(document).scrollTop("2960")
+				},
 			}
 		})

@@ -13,6 +13,7 @@
 		<script src="./js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js" type="text/javascript" charset="utf-8">
 		</script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 	</head>
 	<body>
 		<!-- 首页 -->
@@ -32,7 +33,7 @@
 						<img class="index_banner_list-img" @click='bannerBg' src="./images/×.png">
 					</div>
 					<div class="index_banner_list-item">
-						<div class="index_banner_list-items" v-for="(item,index) in banner_list_items" :key="index">
+						<div class="index_banner_list-items" @click="skip(index)"  v-for="(item,index) in banner_list_items" @click="topTextClick(item)" :key="index">
 							{{item}}
 						</div>
 					</div>
