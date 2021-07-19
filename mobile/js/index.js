@@ -1,13 +1,30 @@
 var vm = new Vue({
 			el: '#box',
 			data: {
-				// 路径
+				// 路径banner_list_items
 				url: 'https://www.hd512.com/admin/php/',
 				// 图片路径
 				urlImg: 'https://www.hd512.com/admin/php/images/',
 				// 隐藏的列表
-				banner_list: 'true',
-				banner_list_items: ['课程中心', '师资力量', '课程大纲', '辉达精神', '关于辉达'],
+				banner_list: false,
+				banner_list_items: [{
+					tit:"课程中心",
+					id:"#index_course"
+				}, 
+				{
+					tit:"课程大纲",
+					id:"#index_outline"
+				},
+				{
+					tit:"师资力量",
+					id:"#index_research"
+				},{
+					tit:"辉达精神",
+					id:"#index_dynamic"
+				}, {
+					tit:"关于辉达",
+					id:"#index_dynamic"
+				}],
 				// 相关信息
 				crotchety_item: [{
 						img: './images/send inquiry@3x.png',
@@ -282,13 +299,7 @@ var vm = new Vue({
 					
 				},
 				skip(index){
-					console.log(index)
-					console.log($(document).scrollTop())
-					if(index==0) $(document).scrollTop("280")
-					if(index==1) $(document).scrollTop("1335")
-					if(index==2) $(document).scrollTop("600")
-					if(index==3) $(document).scrollTop("2440")
-					if(index==4) $(document).scrollTop("2960")
+					this.banner_list = !this.banner_list
 				},
 			}
 		})

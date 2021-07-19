@@ -33,8 +33,8 @@
 						<img class="index_banner_list-img" @click='bannerBg' src="./images/×.png">
 					</div>
 					<div class="index_banner_list-item">
-						<div class="index_banner_list-items" @click="skip(index)"  v-for="(item,index) in banner_list_items" @click="topTextClick(item)" :key="index">
-							{{item}}
+						<div class="index_banner_list-items" @click="skip"  v-for="(item,index) in banner_list_items" @click="topTextClick(item)" :key="index">
+							<a :href="item.id"  >{{item.tit}}</a>
 						</div>
 					</div>
 				</div>
@@ -49,7 +49,7 @@
 				</div>
 			</div>
 			<!-- 课程中心 -->
-			<div class="index_course">
+			<div class="index_course" id="index_course">
 				<div class="index_course_title">
 					课程中心<span class="yuan"></span>
 				</div>
@@ -79,7 +79,7 @@
 				<div class="index_course_button" @click="robotBtn">立即咨询</div>
 			</div>
 			<!-- 课题大纲 -->
-			<div class="index_course index_outline">
+			<div class="index_course index_outline" id="index_outline">
 				<div class="index_course_title index_outline_title">
 					课程大纲<span class="yuan"></span>
 				</div>
@@ -126,7 +126,7 @@
 				<div class="index_outline_button" @click="robotBtn">咨询哪个学科更适合你</div>
 			</div>
 			<!-- 教研团队 -->
-			<div class="index_course index_research">
+			<div class="index_course index_research" id="index_research">
 				<div class="index_course_title index_research_title">
 					教研团队<span class="yuan"></span>
 				</div>
@@ -189,7 +189,7 @@
 				</div>
 			</div>
 			<!-- 辉达动态 -->
-			<div class="index_course index_dynamic">
+			<div class="index_course index_dynamic" id="index_dynamic">
 				<div class="index_course_title index_dynamic_title">
 					辉达动态<span class="yuan"></span>
 				</div>
